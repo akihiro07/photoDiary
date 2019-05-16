@@ -1,0 +1,658 @@
+// ===== 変数定義 =====
+// 色の指定(変数に格納)
+$cream:  #E5DCD1;
+$brown: #A08F65;
+$white: #fff;
+$green: #60770B;
+$red: #A85E5C;
+// 横幅の指定(変数に格納)
+$site-width: 980px;
+// フォントサイズの指定
+$default_font-size: 16px;
+// フォントの指定
+$font-family_ja: 'Noto Serif TC', serif;
+$font-family_en: 'Kaushan Script', cursive;
+
+// ===== SCSSを書いていく =====
+body{
+  font-family: $font-family_ja;
+  margin: 0;
+  padding: 0;
+  background: $cream;
+  .site-width{
+    width: $site-width;
+    margin: 0 auto;
+  }
+}
+// =================================
+// header
+// =================================
+header{
+  background: $brown;
+  color: $white;
+
+  //header .site-width
+  .site-width{
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  //header .mainTitle
+  .mainTitle{
+    a{
+      text-decoration: none;
+      font-family: $font-family_en;
+      font-size: 36px;
+      color: $white;
+      text-shadow: 3px 3px 1px #585655;
+    }
+  }
+  ul{
+    display: flex;
+    justify-content: flex-end;
+  }
+  .nav{
+    text-decoration: none;
+    background: $green;
+    color: $white;
+    font-size: $default_font-size;
+    padding: 4px 6px;
+    border-radius: 4px;
+  }
+  .nav:first-child{
+    margin-right: 28px;
+  }
+}
+.suc-msg{
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  color: $white;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  height: 80px;
+  line-height: 80px;
+}
+
+// =================================
+// main
+// =================================
+// ======== 全ページ共通部分 =========
+main{
+// ======== 1カラムページ共通部分 =========
+  #colum-1{
+    width: 40%;
+    margin: 0 auto;
+    //divタグ(title-frame)以下
+    .title-frame{
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      .title{
+        color: $green;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+    }
+    //divタグ(form-frame)以下
+    .form-frame{
+      background: $brown;
+      color: $green;
+      margin-bottom: 40px;
+      border-radius: 3px;
+      // ========　パスワードリマインダーEmail送信画面 =========
+      &.notitle_form-frame{
+        margin-top: 90px;
+      }
+      .form{
+        padding: 30px;
+        // ========　エラーメッセージ表示 =========
+        .msg-form{
+          padding: 0 0 10px 0;
+          color: $red;
+          font-weight: bold;
+        }
+        input[type="text"], input[type="password"]{
+          display: block;
+          border: none;
+          border-radius: 3px;
+          width: 100%;
+          margin: 10px auto 10px;
+          font-size: $default_font-size;
+          padding: 10px;
+          box-sizing: border-box;
+            // ========　エラー発生時の枠線変化 =========
+          &.err{
+            border: 2px solid $red;
+          }
+        }
+        // ========　パスワードリマインダー画面 =========
+        .password_remind_msg{
+          display: block;
+          margin-bottom: 30px;
+          font-size: $default_font-size;
+        }
+        .submit-frame{
+          display: flex;
+          justify-content:flex-end;
+        }
+        input[name="submit"]{
+          background: $green;
+          color: $white;
+          border: none;
+          border-radius: 3px;
+          padding: 4px 20px;
+          font-size: $default_font-size;
+          // ========　退会画面 =========
+          &.delete_submit{
+            font-size: 26px;
+            margin: 30px auto;
+          }
+        }
+        input[name="submit"]:hover{
+          cursor: pointer;
+        }
+        // ========　ログイン画面 =========
+        .login_save_text{
+          font-size: 14px;
+          margin-left: 3px;
+        }
+        // ========　ログイン画面 =========
+        .to_pass-remind{
+          display: block;
+          margin-top: 20px;
+          font-size: 14px;
+          text-decoration: none;
+          color: $green;
+        }
+        .to_pass-remind:hover{
+          cursor: pointer;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+  // =====================
+  // 2カラムの場合
+  #colum-2{
+    width: 100%;
+    margin: 0 auto;
+    //divタグ(title-frame)以下
+    .title-frame{
+      font-size: 30px;
+      display: flex;
+      justify-content: center;
+      .title{
+        color: $green;
+        margin-top: 40px;
+        margin-bottom: 20px;
+      }
+    }
+    //divタグ(form-frame)以下
+    .form-frame{
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+      #colum-2-1{
+        width: 60%;
+        // ========　 投稿一覧画面 =========
+        .form-top{
+          color: $green;
+          display: flex;
+          justify-content: space-between;
+          margin-bottom: 10px;
+          // ========　 投稿一覧画面 =========
+          .data-num-frame{
+            display: flex;
+            align-items: center;
+            background: $brown;
+            border-radius: 3px;
+            padding: 10px;
+          }
+          // ========　 投稿一覧画面 =========
+          .data-search-frame{
+            background: $brown;
+            border-radius: 3px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            .order-frame{
+              margin: 0 10px;
+              .order{
+                font-size: 12px;
+                border: none;
+              }
+            }
+            .keyword-research-frame{
+              margin: 0 10px;
+              .keyword-research-enter{
+                border-radius: 3px;
+                font-size: 14px;
+                padding: 5px 8px;
+                margin: 10px 3px;
+                border: none;
+                box-sizing: border-box;
+              }
+              .keyword-research-submit{
+                background: $green;
+                color: $white;
+                border-radius: 3px;
+                border: none;
+                font-size: 12px;
+                padding: 3px 10px;
+              }
+              .keyword-research-submit:hover{
+                cursor: pointer;
+              }
+            }
+          }
+        }
+        .form{
+          background: $brown;
+          color: $green;
+          border-radius: 3px;
+          padding: 30px 100px;
+          // ========　エラーメッセージ表示 =========
+          .msg-form{
+            padding: 0 0 20px 0;
+            color: $red;
+            font-weight: bold;
+          }
+          .msg-img-form{
+            padding: 15px 0 15px 0;
+            color: $red;
+            font-weight: bold;
+          }
+          // ========　マイページ画面 =========
+          &.mypage-form{
+            padding: 30px 40px;
+            // 投稿コンテンツ・お気に入りコンテンツ
+            .up-content, .favorite-content{
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: flex-start;
+              margin-bottom: 30px;
+              .mycontent-frame, .myfavorite-frame{
+                display: block;
+                color: $green;
+                width: 31%;
+                margin-right: 10px;
+                margin-bottom: 20px;
+                text-align: center;
+                text-decoration: none;
+                transition: .8s;
+                .content-img, .favorite-img{
+                  width: 100%;
+                  height: 101px;
+                  border-radius: 3px;
+                }
+              }
+              .mycontent-frame:hover, .myfavorite-frame:hover{
+                cursor: pointer;
+                transform: scale(1.03);
+                transition: .8s;
+              }
+            }
+            // コメント欄コンテンツ
+          }
+
+          // ========　 投稿一覧画面 =========
+          &.contents-form{
+            overflow: hidden;
+            padding: 30px 20px 0 20px;
+            // ========　 投稿一覧画面 =========
+            .upload-content{
+              color: $green;
+              text-decoration: none;
+              font-size: 18px;
+              display: block;
+              width: 50%;
+              float: left;
+              padding: 0 5px;
+              margin-bottom: 30px;
+              box-sizing: border-box;
+              transition: .8s;
+              .upload-content_img{
+                width: 100%;
+                margin-bottom: 10px;
+              }
+              .upload-content_text{
+                width: 100%;
+                display: block;
+                text-align: center;
+              }
+            }
+            .upload-content:hover{
+              cursor: pointer;
+              transform: scale(1.03);
+              transition: .8s;
+            }
+          }
+          // ========　コンテンツ一覧画面 =========
+          .slider_container{
+            width: 100%;
+            height: 258px;
+            overflow: hidden;
+            .slide_img_frame{
+              // 横幅はJSファイルで設定済み
+              height: 100%;
+              overflow: hidden;
+              position: relative; // TODO: なぜこれを付けなければスライドが動かない？
+              .slide_img{
+                width: 388px;
+                height: 100%;
+                float: left;
+                img{
+                  height: 248px;
+                }
+              }
+            }
+          }
+          .slider_nav_frame{
+            display: flex; justify-content: space-between;
+            .slider_nav{
+              width: 25px;
+              display: block;
+              margin-bottom: 15px;
+              font-size:34px;
+              cursor: pointer;
+            }
+          }
+          // ========　マイページ画面 =========
+          .mypage-h3{
+            font-size: 20px;
+            font-weight: bold;
+            margin-bottom: 10px;
+          }
+          // ========　マイページ画面 =========
+          .latest-message{
+            width: 100%;
+            // ========　マイページ画面 =========
+            th, td{
+              padding: 5px;
+              box-sizing: border-box;
+            }
+            // ========　マイページ画面 =========
+            .th-left, .th-center{
+              width: 25%;
+            }
+            // ========　マイページ画面 =========
+            .th-right{
+              width: 50%;
+            }
+          }
+          input[type="number"]{
+            display: block;
+            border: none;
+            border-radius: 3px;
+            width: 20%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            font-size: $default_font-size;
+            padding: 10px;
+            box-sizing: border-box;
+            &.err{
+              border: 2px solid $red;
+            }
+          }
+          // ========　プロフィール画面 =========
+          .select{
+            display: block;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border: none;
+            font-size: 14px;
+          }
+          input[type="text"], input[type="password"]{
+            display: block;
+            border: none;
+            border-radius: 3px;
+            width: 100%;
+            margin: 10px auto 10px;
+            font-size: $default_font-size;
+            padding: 10px;
+            box-sizing: border-box;
+            // ========　エラー発生時の枠線変化 =========
+            &.err{
+              border: 2px solid $red;
+            }
+          }
+          // ========　コンテンツ投稿・編集画面 =========
+          .picture-frame{
+            position: relative;
+            width: 100%;
+            height: 200px;
+            background: $white;
+            color: #585655;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            line-height: 200px;
+            text-align: center;
+            font-size: 20px;
+            // inputタグ
+            .input-photo{
+              position: absolute;
+              top: 0;
+              left: 0;
+              opacity: 0;
+              height: 200px;
+              width: 100%;
+              z-index: 1;
+            }
+            // imgタグ
+            .photo-img{
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              border-radius: 3px;
+            }
+          }
+          .picture-frame:last-child{
+            margin-bottom: 30px;
+          }
+          // ========　プロフィール画面 =========
+          .prof-img{
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+          }
+          // ========　コンテンツ詳細画面 =========
+          .content-edit_detail{
+            background: $white;
+            border-radius: 3px;
+            min-height: 150px;
+            margin: 10px auto 20px;
+          }
+          // ========　コンテンツ投稿画面 =========
+          .content-edit{
+            width: 100%;
+            margin-top: 10px;
+            margin-bottom: 20px;
+            border-radius: 3px;
+            border: none;
+            font-size: $default_font-size;
+            padding: 10px;
+            box-sizing: border-box;
+          }
+          .comment{
+            width: 100%;
+            border-radius: 3px;
+            border: none;
+            padding: 10px;
+            box-sizing: border-box;
+            margin-top: 10px;
+            font-size: $default_font-size;
+
+          }
+          .submit-frame{
+            display: flex;
+            justify-content:flex-end;
+          }
+          input[name="submit"]{
+            background: $green;
+            color: $white;
+            border: none;
+            border-radius: 3px;
+            padding: 4px 20px;
+            font-size: $default_font-size;
+          }
+          input[name="submit"]:hover{
+            cursor: pointer;
+          }
+          // ========　コンテンツ詳細画面 =========
+          #message-area{
+            overflow: hidden;
+            background: $white;
+            border-radius: 3px;
+            margin: 10px auto 20px;
+            padding: 10px;
+            box-sizing: border-box;
+            .message-frame-show{
+              min-height: 30px;
+              // スクロールバー用
+              max-height: 300px;
+              overflow: auto;
+              .msg-box{
+                margin-bottom: 12px;
+                .message{
+                  display: inline-block;
+                  background: $cream;
+                  padding: 7px 10px;
+                  margin-bottom: 3px;
+                  font-size: 14px;
+                  line-height: 1.2; //相対指定(フォントサイズが変わっても対応)
+                  border-radius: 3px;
+                  max-width: 65%;
+                  word-wrap: break-word;
+                }
+                .msg_date{
+                  font-size: 12px;
+                  padding-left: 5px;
+                }
+              }
+            }
+            .message_entry{
+              background: #E6E5E3;
+              font-size: 12px;
+              // TODO: margin: 0 autoにすると左寄せになるのはなぜ？
+              margin-top: 20px;
+              margin-bottom: 10px;
+            }
+            .submit{
+              background: $green;
+              color: $white;
+              border: none;
+              padding: 3px 10px;
+              margin-bottom: 10px;
+              font-size: 12px;
+              float: right;
+            }
+          }
+          // ========　コンテンツ詳細画面 =========
+          .back_contents{
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            color: $green;
+          }
+          // ========　パスワード変更・プロフィール画面 =========
+          .back_contents:hover{
+            cursor: pointer;
+            font-weight: bold;
+          }
+          // ========　パスワード変更・プロフィール画面 =========
+          .back_mypage{
+            display: block;
+            margin-top: 20px;
+            font-size: 14px;
+            text-decoration: none;
+            color: $green;
+          }
+          // ========　パスワード変更・プロフィール画面 =========
+          .back_mypage:hover{
+            cursor: pointer;
+            font-weight: bold;
+          }
+        }
+        .form-bottom{
+          margin-top: 20px;
+          ul{
+            display: flex;
+            justify-content: center;
+            .list-item{
+              background: $green;
+              color: $white;
+              border-radius: 3px;
+              margin-right: 4px;
+              width: 5%;
+              text-align: center;
+              a{
+                display: block;
+                width: 100%;
+                padding: 5px 2px;
+                box-sizing: border-box;
+                color: $white;
+                text-decoration: none;
+              }
+              a:hover{
+                cursor: pointer;
+                text-decoration: underline;
+              }
+              &.now-page{
+                background:darken($green, 6%);
+              }
+            }
+          }
+        }
+      }
+      #colum-2-2{
+        background: $brown;
+        color: $green;
+        border-radius: 3px;
+        width: 30%;
+        min-height: 500px;
+        max-height: 500px;
+        .img-frame{
+          margin: 20px auto;
+          width: 250px;
+          img{
+            width: 100%;
+            max-height: 170px;
+            border-radius: 10px;
+          }
+        }
+        .item-right{
+          color: $green;
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          margin-bottom: 10px;
+        }
+        .item-right:hover{
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}
+
+// =================================
+//  footer
+// =================================
+footer{
+  background: $brown;
+  color: $white;
+  height: 50px;
+  text-align: center;
+  p{
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 50px;
+  }
+}

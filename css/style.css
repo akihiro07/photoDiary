@@ -1,0 +1,478 @@
+body {
+  font-family: "Noto Serif TC", serif;
+  margin: 0;
+  padding: 0;
+  background: #E5DCD1; }
+  body .site-width {
+    width: 980px;
+    margin: 0 auto; }
+
+header {
+  background: #A08F65;
+  color: #fff; }
+  header .site-width {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; }
+  header .mainTitle a {
+    text-decoration: none;
+    font-family: "Kaushan Script", cursive;
+    font-size: 36px;
+    color: #fff;
+    text-shadow: 3px 3px 1px #585655; }
+  header ul {
+    display: flex;
+    justify-content: flex-end; }
+  header .nav {
+    text-decoration: none;
+    background: #60770B;
+    color: #fff;
+    font-size: 16px;
+    padding: 4px 6px;
+    border-radius: 4px; }
+  header .nav:first-child {
+    margin-right: 28px; }
+
+.suc-msg {
+  width: 100%;
+  display: block;
+  position: fixed;
+  top: 0;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  text-align: center;
+  height: 80px;
+  line-height: 80px; }
+
+main #colum-1 {
+  width: 40%;
+  margin: 0 auto; }
+  main #colum-1 .title-frame {
+    font-size: 30px;
+    display: flex;
+    justify-content: center; }
+    main #colum-1 .title-frame .title {
+      color: #60770B;
+      margin-top: 40px;
+      margin-bottom: 20px; }
+  main #colum-1 .form-frame {
+    background: #A08F65;
+    color: #60770B;
+    margin-bottom: 40px;
+    border-radius: 3px; }
+    main #colum-1 .form-frame.notitle_form-frame {
+      margin-top: 90px; }
+    main #colum-1 .form-frame .form {
+      padding: 30px; }
+      main #colum-1 .form-frame .form .msg-form {
+        padding: 0 0 10px 0;
+        color: #A85E5C;
+        font-weight: bold; }
+      main #colum-1 .form-frame .form input[type="text"], main #colum-1 .form-frame .form input[type="password"] {
+        display: block;
+        border: none;
+        border-radius: 3px;
+        width: 100%;
+        margin: 10px auto 10px;
+        font-size: 16px;
+        padding: 10px;
+        box-sizing: border-box; }
+        main #colum-1 .form-frame .form input[type="text"].err, main #colum-1 .form-frame .form input[type="password"].err {
+          border: 2px solid #A85E5C; }
+      main #colum-1 .form-frame .form .password_remind_msg {
+        display: block;
+        margin-bottom: 30px;
+        font-size: 16px; }
+      main #colum-1 .form-frame .form .submit-frame {
+        display: flex;
+        justify-content: flex-end; }
+      main #colum-1 .form-frame .form input[name="submit"] {
+        background: #60770B;
+        color: #fff;
+        border: none;
+        border-radius: 3px;
+        padding: 4px 20px;
+        font-size: 16px; }
+        main #colum-1 .form-frame .form input[name="submit"].delete_submit {
+          font-size: 26px;
+          margin: 30px auto; }
+      main #colum-1 .form-frame .form input[name="submit"]:hover {
+        cursor: pointer; }
+      main #colum-1 .form-frame .form .login_save_text {
+        font-size: 14px;
+        margin-left: 3px; }
+      main #colum-1 .form-frame .form .to_pass-remind {
+        display: block;
+        margin-top: 20px;
+        font-size: 14px;
+        text-decoration: none;
+        color: #60770B; }
+      main #colum-1 .form-frame .form .to_pass-remind:hover {
+        cursor: pointer;
+        font-weight: bold; }
+
+main #colum-2 {
+  width: 100%;
+  margin: 0 auto; }
+  main #colum-2 .title-frame {
+    font-size: 30px;
+    display: flex;
+    justify-content: center; }
+    main #colum-2 .title-frame .title {
+      color: #60770B;
+      margin-top: 40px;
+      margin-bottom: 20px; }
+  main #colum-2 .form-frame {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px; }
+    main #colum-2 .form-frame #colum-2-1 {
+      width: 60%; }
+      main #colum-2 .form-frame #colum-2-1 .form-top {
+        color: #60770B;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px; }
+        main #colum-2 .form-frame #colum-2-1 .form-top .data-num-frame {
+          display: flex;
+          align-items: center;
+          background: #A08F65;
+          border-radius: 3px;
+          padding: 10px; }
+        main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame {
+          background: #A08F65;
+          border-radius: 3px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center; }
+          main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .order-frame {
+            margin: 0 10px; }
+            main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .order-frame .order {
+              font-size: 12px;
+              border: none; }
+          main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .keyword-research-frame {
+            margin: 0 10px; }
+            main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .keyword-research-frame .keyword-research-enter {
+              border-radius: 3px;
+              font-size: 14px;
+              padding: 5px 8px;
+              margin: 10px 3px;
+              border: none;
+              box-sizing: border-box; }
+            main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .keyword-research-frame .keyword-research-submit {
+              background: #60770B;
+              color: #fff;
+              border-radius: 3px;
+              border: none;
+              font-size: 12px;
+              padding: 3px 10px; }
+            main #colum-2 .form-frame #colum-2-1 .form-top .data-search-frame .keyword-research-frame .keyword-research-submit:hover {
+              cursor: pointer; }
+      main #colum-2 .form-frame #colum-2-1 .form {
+        background: #A08F65;
+        color: #60770B;
+        border-radius: 3px;
+        padding: 30px 100px; }
+        main #colum-2 .form-frame #colum-2-1 .form .msg-form {
+          padding: 0 0 20px 0;
+          color: #A85E5C;
+          font-weight: bold; }
+        main #colum-2 .form-frame #colum-2-1 .form .msg-img-form {
+          padding: 15px 0 15px 0;
+          color: #A85E5C;
+          font-weight: bold; }
+        main #colum-2 .form-frame #colum-2-1 .form.mypage-form {
+          padding: 30px 40px; }
+          main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: flex-start;
+            margin-bottom: 30px; }
+            main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .mycontent-frame, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .myfavorite-frame, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .mycontent-frame, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .myfavorite-frame {
+              display: block;
+              color: #60770B;
+              width: 31%;
+              margin-right: 10px;
+              margin-bottom: 20px;
+              text-align: center;
+              text-decoration: none;
+              transition: .8s; }
+              main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .mycontent-frame .content-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .mycontent-frame .favorite-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .myfavorite-frame .content-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .myfavorite-frame .favorite-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .mycontent-frame .content-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .mycontent-frame .favorite-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .myfavorite-frame .content-img, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .myfavorite-frame .favorite-img {
+                width: 100%;
+                height: 101px;
+                border-radius: 3px; }
+            main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .mycontent-frame:hover, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .up-content .myfavorite-frame:hover, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .mycontent-frame:hover, main #colum-2 .form-frame #colum-2-1 .form.mypage-form .favorite-content .myfavorite-frame:hover {
+              cursor: pointer;
+              transform: scale(1.03);
+              transition: .8s; }
+        main #colum-2 .form-frame #colum-2-1 .form.contents-form {
+          overflow: hidden;
+          padding: 30px 20px 0 20px; }
+          main #colum-2 .form-frame #colum-2-1 .form.contents-form .upload-content {
+            color: #60770B;
+            text-decoration: none;
+            font-size: 18px;
+            display: block;
+            width: 50%;
+            float: left;
+            padding: 0 5px;
+            margin-bottom: 30px;
+            box-sizing: border-box;
+            transition: .8s; }
+            main #colum-2 .form-frame #colum-2-1 .form.contents-form .upload-content .upload-content_img {
+              width: 100%;
+              margin-bottom: 10px; }
+            main #colum-2 .form-frame #colum-2-1 .form.contents-form .upload-content .upload-content_text {
+              width: 100%;
+              display: block;
+              text-align: center; }
+          main #colum-2 .form-frame #colum-2-1 .form.contents-form .upload-content:hover {
+            cursor: pointer;
+            transform: scale(1.03);
+            transition: .8s; }
+        main #colum-2 .form-frame #colum-2-1 .form .slider_container {
+          width: 100%;
+          height: 258px;
+          overflow: hidden; }
+          main #colum-2 .form-frame #colum-2-1 .form .slider_container .slide_img_frame {
+            height: 100%;
+            overflow: hidden;
+            position: relative; }
+            main #colum-2 .form-frame #colum-2-1 .form .slider_container .slide_img_frame .slide_img {
+              width: 388px;
+              height: 100%;
+              float: left; }
+              main #colum-2 .form-frame #colum-2-1 .form .slider_container .slide_img_frame .slide_img img {
+                height: 248px; }
+        main #colum-2 .form-frame #colum-2-1 .form .slider_nav_frame {
+          display: flex;
+          justify-content: space-between; }
+          main #colum-2 .form-frame #colum-2-1 .form .slider_nav_frame .slider_nav {
+            width: 25px;
+            display: block;
+            margin-bottom: 15px;
+            font-size: 34px;
+            cursor: pointer; }
+        main #colum-2 .form-frame #colum-2-1 .form .mypage-h3 {
+          font-size: 20px;
+          font-weight: bold;
+          margin-bottom: 10px; }
+        main #colum-2 .form-frame #colum-2-1 .form .latest-message {
+          width: 100%; }
+          main #colum-2 .form-frame #colum-2-1 .form .latest-message th, main #colum-2 .form-frame #colum-2-1 .form .latest-message td {
+            padding: 5px;
+            box-sizing: border-box; }
+          main #colum-2 .form-frame #colum-2-1 .form .latest-message .th-left, main #colum-2 .form-frame #colum-2-1 .form .latest-message .th-center {
+            width: 25%; }
+          main #colum-2 .form-frame #colum-2-1 .form .latest-message .th-right {
+            width: 50%; }
+        main #colum-2 .form-frame #colum-2-1 .form input[type="number"] {
+          display: block;
+          border: none;
+          border-radius: 3px;
+          width: 20%;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          font-size: 16px;
+          padding: 10px;
+          box-sizing: border-box; }
+          main #colum-2 .form-frame #colum-2-1 .form input[type="number"].err {
+            border: 2px solid #A85E5C; }
+        main #colum-2 .form-frame #colum-2-1 .form .select {
+          display: block;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border: none;
+          font-size: 14px; }
+        main #colum-2 .form-frame #colum-2-1 .form input[type="text"], main #colum-2 .form-frame #colum-2-1 .form input[type="password"] {
+          display: block;
+          border: none;
+          border-radius: 3px;
+          width: 100%;
+          margin: 10px auto 10px;
+          font-size: 16px;
+          padding: 10px;
+          box-sizing: border-box; }
+          main #colum-2 .form-frame #colum-2-1 .form input[type="text"].err, main #colum-2 .form-frame #colum-2-1 .form input[type="password"].err {
+            border: 2px solid #A85E5C; }
+        main #colum-2 .form-frame #colum-2-1 .form .picture-frame {
+          position: relative;
+          width: 100%;
+          height: 200px;
+          background: #fff;
+          color: #585655;
+          margin-bottom: 20px;
+          border-radius: 3px;
+          line-height: 200px;
+          text-align: center;
+          font-size: 20px; }
+          main #colum-2 .form-frame #colum-2-1 .form .picture-frame .input-photo {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            height: 200px;
+            width: 100%;
+            z-index: 1; }
+          main #colum-2 .form-frame #colum-2-1 .form .picture-frame .photo-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 3px; }
+        main #colum-2 .form-frame #colum-2-1 .form .picture-frame:last-child {
+          margin-bottom: 30px; }
+        main #colum-2 .form-frame #colum-2-1 .form .prof-img {
+          width: 100%;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border-radius: 3px; }
+        main #colum-2 .form-frame #colum-2-1 .form .content-edit_detail {
+          background: #fff;
+          border-radius: 3px;
+          min-height: 150px;
+          margin: 10px auto 20px; }
+        main #colum-2 .form-frame #colum-2-1 .form .content-edit {
+          width: 100%;
+          margin-top: 10px;
+          margin-bottom: 20px;
+          border-radius: 3px;
+          border: none;
+          font-size: 16px;
+          padding: 10px;
+          box-sizing: border-box; }
+        main #colum-2 .form-frame #colum-2-1 .form .comment {
+          width: 100%;
+          border-radius: 3px;
+          border: none;
+          padding: 10px;
+          box-sizing: border-box;
+          margin-top: 10px;
+          font-size: 16px; }
+        main #colum-2 .form-frame #colum-2-1 .form .submit-frame {
+          display: flex;
+          justify-content: flex-end; }
+        main #colum-2 .form-frame #colum-2-1 .form input[name="submit"] {
+          background: #60770B;
+          color: #fff;
+          border: none;
+          border-radius: 3px;
+          padding: 4px 20px;
+          font-size: 16px; }
+        main #colum-2 .form-frame #colum-2-1 .form input[name="submit"]:hover {
+          cursor: pointer; }
+        main #colum-2 .form-frame #colum-2-1 .form #message-area {
+          overflow: hidden;
+          background: #fff;
+          border-radius: 3px;
+          margin: 10px auto 20px;
+          padding: 10px;
+          box-sizing: border-box; }
+          main #colum-2 .form-frame #colum-2-1 .form #message-area .message-frame-show {
+            min-height: 30px;
+            max-height: 300px;
+            overflow: auto; }
+            main #colum-2 .form-frame #colum-2-1 .form #message-area .message-frame-show .msg-box {
+              margin-bottom: 12px; }
+              main #colum-2 .form-frame #colum-2-1 .form #message-area .message-frame-show .msg-box .message {
+                display: inline-block;
+                background: #E5DCD1;
+                padding: 7px 10px;
+                margin-bottom: 3px;
+                font-size: 14px;
+                line-height: 1.2;
+                border-radius: 3px;
+                max-width: 65%;
+                word-wrap: break-word; }
+              main #colum-2 .form-frame #colum-2-1 .form #message-area .message-frame-show .msg-box .msg_date {
+                font-size: 12px;
+                padding-left: 5px; }
+          main #colum-2 .form-frame #colum-2-1 .form #message-area .message_entry {
+            background: #E6E5E3;
+            font-size: 12px;
+            margin-top: 20px;
+            margin-bottom: 10px; }
+          main #colum-2 .form-frame #colum-2-1 .form #message-area .submit {
+            background: #60770B;
+            color: #fff;
+            border: none;
+            padding: 3px 10px;
+            margin-bottom: 10px;
+            font-size: 12px;
+            float: right; }
+        main #colum-2 .form-frame #colum-2-1 .form .back_contents {
+          display: block;
+          margin-top: 20px;
+          font-size: 14px;
+          text-decoration: none;
+          color: #60770B; }
+        main #colum-2 .form-frame #colum-2-1 .form .back_contents:hover {
+          cursor: pointer;
+          font-weight: bold; }
+        main #colum-2 .form-frame #colum-2-1 .form .back_mypage {
+          display: block;
+          margin-top: 20px;
+          font-size: 14px;
+          text-decoration: none;
+          color: #60770B; }
+        main #colum-2 .form-frame #colum-2-1 .form .back_mypage:hover {
+          cursor: pointer;
+          font-weight: bold; }
+      main #colum-2 .form-frame #colum-2-1 .form-bottom {
+        margin-top: 20px; }
+        main #colum-2 .form-frame #colum-2-1 .form-bottom ul {
+          display: flex;
+          justify-content: center; }
+          main #colum-2 .form-frame #colum-2-1 .form-bottom ul .list-item {
+            background: #60770B;
+            color: #fff;
+            border-radius: 3px;
+            margin-right: 4px;
+            width: 5%;
+            text-align: center; }
+            main #colum-2 .form-frame #colum-2-1 .form-bottom ul .list-item a {
+              display: block;
+              width: 100%;
+              padding: 5px 2px;
+              box-sizing: border-box;
+              color: #fff;
+              text-decoration: none; }
+            main #colum-2 .form-frame #colum-2-1 .form-bottom ul .list-item a:hover {
+              cursor: pointer;
+              text-decoration: underline; }
+            main #colum-2 .form-frame #colum-2-1 .form-bottom ul .list-item.now-page {
+              background: #495b08; }
+    main #colum-2 .form-frame #colum-2-2 {
+      background: #A08F65;
+      color: #60770B;
+      border-radius: 3px;
+      width: 30%;
+      min-height: 500px;
+      max-height: 500px; }
+      main #colum-2 .form-frame #colum-2-2 .img-frame {
+        margin: 20px auto;
+        width: 250px; }
+        main #colum-2 .form-frame #colum-2-2 .img-frame img {
+          width: 100%;
+          max-height: 170px;
+          border-radius: 10px; }
+      main #colum-2 .form-frame #colum-2-2 .item-right {
+        color: #60770B;
+        display: block;
+        text-decoration: none;
+        text-align: center;
+        margin-bottom: 10px; }
+      main #colum-2 .form-frame #colum-2-2 .item-right:hover {
+        cursor: pointer; }
+
+footer {
+  background: #A08F65;
+  color: #fff;
+  height: 50px;
+  text-align: center; }
+  footer p {
+    font-size: 14px;
+    letter-spacing: 1px;
+    line-height: 50px; }
