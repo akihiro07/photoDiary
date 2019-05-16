@@ -87,7 +87,7 @@ debug('メッセージの中身：'.print_r($messageData, true));
                   </div>
                 </label>
 
-                <label class="item-left">
+                <!-- <label class="item-left">
                   <h3 class="mypage-h3">&#9654; メッセージ</h3>
                   <div class="latest-message-frame">
                     <table class="latest-message">
@@ -98,20 +98,20 @@ debug('メッセージの中身：'.print_r($messageData, true));
                               <th class="th-right">メッセージ</th>
                             </tr>
                           </thead>
-                      <?php if(!empty($messageData)): ?>
-                        <?php foreach ($messageData as $key => $val): ?>
+                      <?php //if(!empty($messageData)): ?>
+                        <?php //foreach ($messageData as $key => $val): ?>
                           <tbody>
                             <tr>
-                              <td class="td-left"><?php echo $val['create_date']; ?></td>
-                              <td class="td-center"><?php echo $val['name']; ?></td>
-                              <td class="td-right"><?php echo $val['message']; ?></td>
+                              <td class="td-left"><?php //echo $val['create_date']; ?></td>
+                              <td class="td-center"><?php// echo $val['name']; ?></td>
+                              <td class="td-right"><?php// echo $val['message']; ?></td>
                             </tr>
                           </tbody>
-                        <?php endforeach; ?>
-                      <?php endif; ?>
+                        <?php// endforeach; ?>
+                      <?php// endif; ?>
                     </table>
                   </div>
-                </label>
+                </label> -->
               </form>
             </section>
 

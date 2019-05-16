@@ -369,26 +369,26 @@ function getBoardData($c_id){
 }
 
 // messageテーブルのデータ取得
-function getMeassageData($boardId){
-  try {
-    $dbh = dbConnect();
-    $sql = 'SELECT *
-            FROM message AS m
-            LEFT JOIN board AS b
-            ON m.board_id = b.board_id
-            WHERE m.board_id = :board_id AND m.delete_flg = 0 ORDER BY send_date DESC';
-    $data = array(':board_id' => $boardId);
-    $stmt = queryPost($dbh, $sql, $data);
-    if($stmt){
-      return $stmt->fetchAll();
-    }else{
-      debug('messageテーブル生成失敗');
-    }
-
-  } catch(Exception $e){
-    error_log('messageテーブル生成時エラー発生：'.$e->getMessage());
-  }
-}
+// function getMeassageData($boardId){
+//   try {
+//     $dbh = dbConnect();
+//     $sql = 'SELECT *
+//             FROM message AS m
+//             LEFT JOIN board AS b
+//             ON m.board_id = b.board_id
+//             WHERE m.board_id = :board_id AND m.delete_flg = 0 ORDER BY send_date DESC';
+//     $data = array(':board_id' => $boardId);
+//     $stmt = queryPost($dbh, $sql, $data);
+//     if($stmt){
+//       return $stmt->fetchAll();
+//     }else{
+//       debug('messageテーブル生成失敗');
+//     }
+//
+//   } catch(Exception $e){
+//     error_log('messageテーブル生成時エラー発生：'.$e->getMessage());
+//   }
+// }
 
 // DBのcontentsテーブル取得関数(コンテンツ一覧で詳細データ取得)
 function TableContentsEdit($currentMinNum, $sort, $PageShow = 10){
