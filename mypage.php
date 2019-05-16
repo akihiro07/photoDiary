@@ -102,9 +102,6 @@ debug('メッセージの中身：'.print_r($messageData, true));
                         <?php foreach ($messageData as $key => $val): ?>
                           <tbody>
                             <tr>
-                              <td class="td-left"><?php echo $val['create_date']; ?></td>
-                              <td class="td-center"><?php echo $val['name']; ?></td>
-                              <td class="td-right"><?php echo $val['message']; ?></td>
                             </tr>
                           </tbody>
                         <?php endforeach; ?>
