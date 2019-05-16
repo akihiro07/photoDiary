@@ -368,27 +368,27 @@ function getBoardData($c_id){
   }
 }
 
-// messageテーブルのデータ取得
-// function getMeassageData($boardId){
-//   try {
-//     $dbh = dbConnect();
-//     $sql = 'SELECT *
-//             FROM message AS m
-//             LEFT JOIN board AS b
-//             ON m.board_id = b.board_id
-//             WHERE m.board_id = :board_id AND m.delete_flg = 0 ORDER BY send_date DESC';
-//     $data = array(':board_id' => $boardId);
-//     $stmt = queryPost($dbh, $sql, $data);
-//     if($stmt){
-//       return $stmt->fetchAll();
-//     }else{
-//       debug('messageテーブル生成失敗');
-//     }
-//
-//   } catch(Exception $e){
-//     error_log('messageテーブル生成時エラー発生：'.$e->getMessage());
-//   }
-// }
+messageテーブルのデータ取得
+function getMeassageData($boardId){
+  try {
+    $dbh = dbConnect();
+    $sql = 'SELECT *
+            FROM message AS m
+            LEFT JOIN board AS b
+            ON m.board_id = b.board_id
+            WHERE m.board_id = :board_id AND m.delete_flg = 0 ORDER BY send_date DESC';
+    $data = array(':board_id' => $boardId);
+    $stmt = queryPost($dbh, $sql, $data);
+    if($stmt){
+      return $stmt->fetchAll();
+    }else{
+      debug('messageテーブル生成失敗');
+    }
+
+  } catch(Exception $e){
+    error_log('messageテーブル生成時エラー発生：'.$e->getMessage());
+  }
+}
 
 // DBのcontentsテーブル取得関数(コンテンツ一覧で詳細データ取得)
 function TableContentsEdit($currentMinNum, $sort, $PageShow = 10){
@@ -499,30 +499,30 @@ function getMyFavorites($user_id){
   }
 }
 
-// messageテーブルの同じboard_id内で最新のもののみ取得
-// messageテーブルのデータ取得(マイページに最新メッセージ表示用)
-function getMessage($user_id){
-  try {
-    $dbh = dbConnect();
-    $sql = 'SELECT *
-            FROM message AS m
-            LEFT JOIN users AS u
-            ON m.guest_id = u.user_id
-            WHERE m.owner_id = :u_id AND NOT m.guest_id = :u_id';
-    $data = array(':u_id' => $user_id);
-    $stmt = queryPost($dbh, $sql, $data);
-    if($stmt){
-      debug('クエリ成功！！');
-      return $stmt->fetchAll(); // TODO: 最新の情報だけを返したい
-    }else{
-      debug('クエリ失敗・・・。');
-      return false;
-    }
-
-  } catch (Exception $e) {
-    error_log('エラー発生：'.$e->getMessage());
-  }
-}
+// // messageテーブルの同じboard_id内で最新のもののみ取得
+// // messageテーブルのデータ取得(マイページに最新メッセージ表示用)
+// function getMessage($user_id){
+//   try {
+//     $dbh = dbConnect();
+//     $sql = 'SELECT *
+//             FROM message AS m
+//             LEFT JOIN users AS u
+//             ON m.guest_id = u.user_id
+//             WHERE m.owner_id = :u_id AND NOT m.guest_id = :u_id';
+//     $data = array(':u_id' => $user_id);
+//     $stmt = queryPost($dbh, $sql, $data);
+//     if($stmt){
+//       debug('クエリ成功！！');
+//       return $stmt->fetchAll(); // TODO: 最新の情報だけを返したい
+//     }else{
+//       debug('クエリ失敗・・・。');
+//       return false;
+//     }
+//
+//   } catch (Exception $e) {
+//     error_log('エラー発生：'.$e->getMessage());
+//   }
+// }
 
 // ========== メール送信実行関数 ==========
 function SendMail($from, $subject, $to, $comment){
