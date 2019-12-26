@@ -28,7 +28,7 @@ debug('コンテンツ内容：'.print_r($ContentData, true));
 // ===============================
 // 編集画面:パラメータ改ざんチェック(自分以外のコンテンツ編集画面に入ろうとしていないか)
 // ===============================
-// GETパラメータはあるけどURLが改ざんされている（いじくられた）場合、正しい商品データが取れないのでマイページへ遷移
+// GETパラメータはあるけどURLが改ざんされている（いじられた）場合、正しい商品データが取れないのでマイページへ遷移
 if(!empty($get_param) && empty($ContentData)){
   debug('GETパラメータのコンテンツIDが違います。マイページへ遷移します。');
   header("Location:mypage.php");
@@ -88,7 +88,11 @@ debug('FILES送信データ：'.print_r($_FILES, true));
     if($ContentData['title'] !== $title){
       ValidRequired($title, 'title');
     }
-    if($ContentData['pic1'] !== $picture){
+
+    //画像アップロードがない又はアップロード済みの画像がない場合
+    if(!empty($ContentData['pic1'])){
+      true;
+    }elseif($ContentData['pic1'] !== $picture){
       ValidRequiredImg($picture, 'picture');
     }
 

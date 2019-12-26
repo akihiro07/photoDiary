@@ -368,7 +368,7 @@ function getBoardData($c_id){
   }
 }
 
-messageテーブルのデータ取得
+//messageテーブルのデータ取得
 function getMeassageData($boardId){
   try {
     $dbh = dbConnect();

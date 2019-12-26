@@ -42,7 +42,7 @@ if(!empty($_POST)){
         // DBへ接続
         $dbh = dbConnect();
         // SQL文準備・作成
-        $sql = 'SELECT pass, user_id FROM users WHERE email = :email';
+        $sql = 'SELECT pass, user_id FROM users WHERE email = :email AND delete_flg = 0'; //退会済みのユーザーは排除
         $data = array(':email' => $email);
         // SQL文実行
         $stmt = queryPost($dbh, $sql, $data);

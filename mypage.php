@@ -16,10 +16,10 @@ require('auth.php');
 $userId = $_SESSION['user_id'];
 $ContentsData = getMyContents($userId);
 $FavoritesData = getMyFavorites($userId);
-$messageData = getMessage($userId);
+// $messageData = getMessage($userId);
 debug('マイコンテンツの中身：'.print_r($ContentsData, true));
 debug('お気に入りの中身：'.print_r($FavoritesData, true));
-debug('メッセージの中身：'.print_r($messageData, true));
+// debug('メッセージの中身：'.print_r($messageData, true));
 
 
 ?>

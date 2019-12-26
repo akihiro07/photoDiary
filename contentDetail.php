@@ -89,8 +89,8 @@ $messageData = getMeassageData($boardId);
                     <ul class="slide_img_frame">
                       <?php // TODO: 写真2,3がからの場合はスライドさせない or スライドにからの画像を入れる ?>
                       <li class="slide_img"><img class="prof-img" src="<?php echo $contentDetaildata['pic1']; ?>" alt="" style="margin-bottom: 5px;"></li>
-                      <li class="slide_img"><img class="prof-img" src="<?php echo $contentDetaildata['pic2']; ?>" alt="" style="margin-bottom: 5px;"></li>
-                      <li class="slide_img"><img class="prof-img" src="<?php echo $contentDetaildata['pic3']; ?>" alt="" style="margin-bottom: 5px;"></li>
+                      <li class="slide_img"><img class="prof-img" src="<?php if(!empty($contentDetaildata['pic2'])){echo $contentDetaildata['pic2'];}else{echo 'img/noimage.jpg';}; ?>" alt="" style="margin-bottom: 5px;"></li>
+                      <li class="slide_img"><img class="prof-img" src="<?php if(!empty($contentDetaildata['pic3'])){echo $contentDetaildata['pic3'];}else{echo 'img/noimage.jpg';}; ?>" alt="" style="margin-bottom: 5px;"></li>
                     </ul>
                   </div>
                   <div class="slider_nav_frame">
@@ -102,9 +102,6 @@ $messageData = getMeassageData($boardId);
                   思い出
                   <div class="content-edit_detail" style="padding: 10px;"><?php echo $contentDetaildata['comment']; ?></div>
                 </label>
-                <?php // TODO: Ajaxを使用して、送信したメッセージを更新せずに反映できるか ?>
-                <?php // TODO: 相手と自分(コンテンツ投稿者)によって左右に分けたい(Ajax部分でuserテーブルを取得する必要あり？) ?>
-                <?php // TODO: 入力したら入力欄の文字を消したい ?>
                 <div class="item-left">
                   メッセージ
                   <div id="message-area">
